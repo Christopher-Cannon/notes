@@ -18,11 +18,16 @@ body, label, input, textarea, button {
   font-family: "Roboto", "Arial", sans-serif;
 }
 
+pre {
+  border-radius: 0.125rem;
+}
+
 code, pre {
   font-family: "Roboto Mono", monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #25c;
   margin: 2rem 0 1rem;
 }
 
@@ -38,6 +43,15 @@ p {
   margin: 1rem 0;
 }
 
+a {
+  color: #25c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 ul {
   margin-left: 1rem;
 }
@@ -49,6 +63,24 @@ li {
 img {
   display: block;
   width: 100%;
+}
+
+.btn {
+  background-color: #d9d3d0;
+  border-radius: 0.125rem;
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.btn-top {
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: #d4cecb;
+  text-decoration: none;
 }
 
 .page {

@@ -65,6 +65,27 @@ img {
   width: 100%;
 }
 
+blockquote {
+  border: 2px dashed black;
+  border-radius: 0.125rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '"';
+}
+
+figcaption {
+  font-size: 80%;
+}
+
+figcaption::before {
+  content: "—";
+  margin: 0;
+}
+
 .btn {
   background-color: #d9d3d0;
   border-radius: 0.125rem;

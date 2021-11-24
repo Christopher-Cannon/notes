@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JS Callback Function</title>
+
+  <script>
+
+    function add(x, y, callback) {
+      let result = x + y;
+
+      // Doesn't need to be returned
+      // Doesn't need to be at the end of the function
+      return callback(result);
+    }
+
+    let n1 = 4;
+    let n2 = 7;
+
+    // Log the output to the console
+    add(n1, n2, (output) => {
+      console.log(`${n1} + ${n2} = ${output}`);
+    });
+
+    // Write output to the document
+    add(n1, n2, (output) => {
+      document.write(`${n1} + ${n2} = ${output}`);
+    });
+
+    // Get the result * 2
+    let result = add(n1, n2, (output) => output * 2);
+
+    console.log(`Got ${result} back`);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

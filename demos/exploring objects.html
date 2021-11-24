@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploring Built-in Objects</title>
+  <title>Exploring Global Objects</title>
 
   <script>
 
@@ -15,7 +15,7 @@
   </script>
 </head>
 <body>
-  <h1>Exploring Built-in Objects</h1>
+  <h1>Exploring Global Objects</h1>
 
   <h2>window</h2>
 
@@ -43,7 +43,6 @@
   <ul>
     <script>
       
-      console.log(document);
       writeProperty(document, "URL");
       writeProperty(document, "baseURI");
       writeProperty(document, "charset");
@@ -73,6 +72,19 @@
     writeProperty(navigator, "userAgent");
 
   </script>
+  </ul>
+
+  <h2>Number</h2>
+
+  <ul>
+    <script>
+
+      writeProperty(Number, "MAX_SAFE_INTEGER");
+      writeProperty(Number, "MIN_SAFE_INTEGER");
+      writeProperty(Number, "MAX_VALUE");
+      writeProperty(Number, "MIN_VALUE");
+
+    </script>
   </ul>
 </body>
 </html>

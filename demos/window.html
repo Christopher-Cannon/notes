@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window</title>
+
+  <style>
+
+    body {
+      min-height: 200vh;
+    }
+    
+    .fixed {
+      position: fixed;
+    }
+    
+    .circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .circle {
+      background-color: crimson;
+      border-radius: 50px;
+      margin-top: 50vh;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="fixed">
+    <div id="dimensions">W: 0 - H: 0</div>
+    <div id="mouse"></div>
+  </div>
+
+  <div class="circle-container">
+    <div class="circle" id="circle"></div>
+  </div>
+  
+  <script>
+
+    // Constrain any number to within 0 - 255
+    function toRGBNum(num) {
+      while (num > 255) {
+        num -= 255;
+      }
+      return Math.abs(num);
+    }
+
+    const dimensions = document.querySelector("#dimensions");
+    const mouse = document.querySelector("#mouse");
+    const circle = document.querySelector("#circle");
+
+    window.addEventListener("resize", () => {
+      let width = screen.width;
+      let height = screen.height;
+  
+      dimensions.textContent = `W: ${width} - H: ${height}`;
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      mouse.innerText = `
+      Screen: ${e.screenX}, ${e.screenY}
+      Client: ${e.clientX}, ${e.clientY} 
+      Page: ${e.pageX}, ${e.pageY}
+      Movement: ${e.movementX}, ${e.movementY}
+      `;
+
+      circle.style.width = `${25 + Math.abs(e.movementX) * 5}px`;
+      circle.style.height = `${25 + Math.abs(e.movementY) * 5}px`;
+      circle.style.backgroundColor = `rgb(
+        ${toRGBNum(e.screenX)}, 
+        ${toRGBNum(e.screenY)}, 
+        ${toRGBNum(e.pageY)}
+      )`;
+      circle.style.borderRadius = `${(e.movementX + e.movementY) * 2}px`;
+    });
+
+  </script>
+</body>
+</html>

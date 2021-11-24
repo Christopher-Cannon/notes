@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploring Built-in Objects</title>
+
+  <script>
+
+    function writeProperty(object, prop, note="") {
+      document.write(`<li><b>${note ? note + "." : ""}${prop}:</b> ${object[prop]}</li>`);
+    }
+
+  </script>
+</head>
+<body>
+  <h1>Exploring Built-in Objects</h1>
+
+  <h2>window</h2>
+
+  <ul>
+  <script>
+
+    writeProperty(window, "fullScreen");
+    
+  </script>
+  </ul>
+  
+  <h3>screen</h3>
+  <ul>
+    <script>
+      
+      writeProperty(window.screen.orientation, "type", "orientation");
+      writeProperty(window.screen, "height");
+      writeProperty(window.screen, "width");
+      
+      </script>
+  </ul>
+  
+  <h2>document</h2>
+  
+  <ul>
+    <script>
+      
+      console.log(document);
+      writeProperty(document, "URL");
+      writeProperty(document, "baseURI");
+      writeProperty(document, "charset");
+      writeProperty(document, "contentType");
+      writeProperty(document, "documentURI");
+      writeProperty(document, "domain");
+      writeProperty(document, "fullscreen");
+      writeProperty(document, "lastModified");
+      writeProperty(document, "readyState");
+      writeProperty(document, "title");
+
+  </script>
+  </ul>
+
+  <h2>navigator</h2>
+
+  <ul>
+  <script>
+
+    writeProperty(navigator, "appCodeName");
+    writeProperty(navigator, "appName");
+    writeProperty(navigator, "appVersion");
+    writeProperty(navigator, "doNotTrack");
+    writeProperty(navigator, "language");
+    writeProperty(navigator, "oscpu");
+    writeProperty(navigator, "product");
+    writeProperty(navigator, "userAgent");
+
+  </script>
+  </ul>
+</body>
+</html>

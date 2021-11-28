@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web App Fundamentals</title>
+
+  <link rel="stylesheet" href="prism/prism.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="prism/prism.js" defer></script>
+  <script src="scripts/contents.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>Web App Fundamentals</h1>
+
+      <p>
+        From <a href="https://fullstackopen.com/en/part0/fundamentals_of_web_apps">Full Stack Open</a>.
+      </p>
+    </header>
+
+    <section>
+      <h2>Contents</h2>
+
+      <ul id="contents">
+
+      </ul>
+    </section>
+
+    <section id="dev-console">
+      <h2>Developer Console</h2>
+
+      <p>
+        Good idea to keep open when developing web applications. 
+      </p>
+
+      <h3>Element</h3>
+
+      <p>Lets us inspect the DOM's structure and element styling.</p>
+
+      <h3>Console</h3>
+
+      <p>
+        This is the JavaScript console which can be used for simple debugging 
+        and displaying application state.
+      </p>
+
+      <h3>Network</h3>
+
+      <p>
+        Network tab lets us see communication between client and server.
+      </p>
+
+      <ul>
+        <li>Ensure "Disable cache" option is checked.</li>
+        <li>Also a good idea to check "Preserve logs" to prevent logs being cleared after a refresh.</li>
+      </ul>
+
+      <img src="images/dev-console-network.png" alt="Screenshot of Google Chrome developer console">
+      <figcaption>Google Chrome developer console - network tab</figcaption>
+    </section>
+
+    <section id="http">
+      <h2>HTTP</h2>
+
+      <p>
+        Hyper Text Transfer Protocol - this is the protocol that browsers and servers 
+        use to communicate.
+      </p>
+
+      <h3>HTTP Request</h3>
+
+      <p>
+        The following methods can be used when making requests to a server.
+      </p>
+
+      <ul>
+        <li><b>GET</b> - Request data without sending data.</li>
+        <li><b>POST</b> - Submit an entity to a resource, usually causing a state change on the server.</li>
+        <li><b>PUT</b> - Whole update of a resource with request payload.</li>
+        <li><b>PATCH</b> - Partial update of a resource.</li>
+        <li><b>DELETE</b> - Deletion of a resource.</li>
+      </ul>
+
+      <h3>HTTP Response</h3>
+
+      <p>
+        Depending on the result of a request, a status code will be sent back 
+        with the response. Several common status codes are detailed below.
+      </p>
+
+      <h4>200 Status Codes</h4>
+      
+      <ul>
+        <li><b>200 OK</b> - Request succeeded.</li>
+        <li><b>201 Created</b>
+           - Request succeeded and new resource created. Usually sent after 
+           POST (and sometimes PUT) requests.
+        </li>
+      </ul>
+      
+      <h4>300 Status Codes</h4>
+
+      <ul>
+        <li><b>301 Moved Permanently</b>
+           - URL of the requested resource has been permanently changed with 
+           the new URL provided in the response.
+        </li>
+      </ul>
+
+      <h4>400 Status Codes</h4>
+
+      <ul>
+        <li><b>400 Bad Request</b> - Server could not understand the request due to invalid syntax.</li>
+        <li><b>401 Unauthorized</b> - Client is inauthenticated.</li>
+        <li><b>403 Forbidden</b>
+           - Client does not have access to requested resource because they are 
+           unauthorized. Unlike 401, the client is known to the server.
+        </li>
+        <li><b>404 Not Found</b> - Server cannot find requested resource.</li>
+        <li><b>405 Method Not Allowed</b>
+           - Request method is known by the server, but is not allowed.
+        </li>
+      </ul>
+
+      <h4>500 Status Codes</h4>
+
+      <ul>
+        <li><b>500 Internal Server Error</b>
+           - Server encountered a situation it does not know how to handle.
+        </li>
+        <li><b>502 Bad Gateway</b>
+           - Server got an invalid response while working as a gateway to respond to a request.
+        </li>
+        <li><b>503 Service Unavailable</b>
+           - Server is not ready to handle the request, possibly due to maintanence or overload.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="#top" class="btn btn-top">Back to Top</a>
+    </footer>
+  </div>
+</body>
+</html>

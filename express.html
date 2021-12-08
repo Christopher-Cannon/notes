@@ -40,10 +40,118 @@
       <h2>Installing Express.js</h2>
 
       <p>
-        The following steps will show you how to install Express.js. It is 
-        assumed that you have installed and understand how to use Node.js 
-        and npm.
+        npm i express
       </p>
+    </section>
+
+    <section id="basic-express">
+      <h2>Basics</h2>
+
+      <h3>
+        Bringing express into our application
+      </h3>
+
+      <pre><code class="language-javascript">const express = require("express");
+const app = express();
+</code></pre>
+
+      <p>
+        Requiring the express package returns a function. We can invoke 
+        this function by referring to it as <b>app</b>.
+      </p>
+
+      <h3>Basic Application</h3>
+
+      <pre><code class="language-javascript">const express = require("express");
+const app = express();
+require("dotenv").config();
+
+app.get("/", (req, res) => {
+  res.send("Hello, World");
+});
+
+app.get("/api/courses", (req, res) => {
+  res.send([1, 2, 3, 1, 2, 3]);
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+</code></pre>
+
+      <p>
+        We can use various commands to handle HTTP requests to our application.
+      </p>
+
+      <ul>
+        <li>app.get()</li>
+        <li>app.post()</li>
+        <li>app.put()</li>
+        <li>app.patch()</li>
+        <li>app.delete()</li>
+      </ul>
+
+      <p>
+        These take a URL and a callback function that defines what the response 
+        will be. This callback has access to the request and response objects.
+      </p>
+    </section>
+
+    <section id="dev-tools">
+      <h2>Development Tools</h2>
+
+      <h3>Node Monitor (nodemon)</h3>
+
+      <p>
+        A useful tool that restarts the node application when you make 
+        changes to the application. Find out more on 
+        <a href="https://www.npmjs.com/package/nodemon" target="_blank">npm</a>.
+      </p>
+
+      <p>
+        Install using the following command (probably 
+        a good idea to save as a dev dependency). 
+      </p>
+
+      <pre><code class="language-javascript">npm i nodemon --save-dev</code></pre>
+
+      <p>
+        The following command (replacing "index.js" with whatever 
+        your application's entry point is) will 
+        restart the application for you when you make changes.
+      </p>
+
+      <pre><code class="language-javascript">nodemon index.js</code></pre>
+
+      <p>
+        This command can also be added to package.json as part of a larger start script.
+      </p>
+
+      <h3>dotenv</h3>
+
+      <p>
+        Allows you to define environment variables not already defined in your local 
+        environment using a <b>.env</b> file.
+      </p>
+
+      <p>
+        <strong>Ensure you add ".env" to your .gitignore file.</strong> This file is 
+        often used to contain database connection credentials which should be kept private.
+      </p>
+
+      <p>
+        Installing as a dev dependency.
+        Creating environment variables.
+        Including in application.
+        Using environment variables.
+      </p>
+    </section>
+
+    <section id="route-parameters">
+      <h2>Route Parameters</h2>
+    </section>
+
+    <section id="query-parameters">
+      <h2>Query Parameters</h2>
     </section>
 
     <section id="routing">

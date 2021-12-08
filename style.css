@@ -43,6 +43,10 @@ p, ul {
   margin: 1rem 0;
 }
 
+p, li {
+  line-height: 1.6;
+}
+
 a {
   color: #25c;
   text-decoration: none;

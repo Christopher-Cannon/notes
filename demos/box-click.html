@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Click Demo</title>
+
+  <style>
+
+    .box-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      margin: auto;
+      width: 90%;
+    }
+
+    .box {
+      background-color: #CCC;
+      border: 3px solid #333;
+      height: 40px;
+    }
+
+    .coloured {
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  
+  <script>
+
+    const boxes = document.querySelectorAll(".box");
+
+    for (const box of boxes) {
+      box.addEventListener("click", (e) => {
+        // Remove coloured class from all boxes
+        for (const box of boxes) {
+          box.classList.remove("coloured");
+        }
+
+        e.target.classList.add("coloured");
+      });
+    }
+
+  </script>
+</body>
+</html>

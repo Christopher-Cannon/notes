@@ -12,9 +12,10 @@ A growing collection of useful references, articles, tools, libraries, tutorials
 [nico zerpa](https://nicozerpa.com/articles/) - JS articles  
 
 ## Articles
-[auth0 - How to Manage JavaScript Fatigue](https://auth0.com/blog/how-to-manage-javascript-fatigue/)  
-[MDN - Supporting older browsers](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)  
-[BrowserHow - What are Security threats with old/outdated Browser version?](https://browserhow.com/what-are-security-threats-with-old-outdated-browser-version/)  
+[How to Manage JavaScript Fatigue](https://auth0.com/blog/how-to-manage-javascript-fatigue/) - auth0  
+[Supporting older browsers](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers) - MDN  
+[What are Security threats with old/outdated Browser version?](https://browserhow.com/what-are-security-threats-with-old-outdated-browser-version/) - BrowserHow  
+[I'm using async/await. Why does my function return a promise?](https://nicozerpa.com/im-using-async-await-why-does-my-function-return-a-promise/) - Nico Zerpa  
 
 ## Tutorials
 

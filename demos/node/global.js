@@ -28,4 +28,4 @@ console.log("platform:", os.platform());
 console.log("uptime:", (os.uptime() / 60 / 60).toFixed(2) + " Hours");
 console.log("User Name:", os.userInfo().username);
 console.log("Home Directory:", os.userInfo().homedir);
-console.log("Network:", os.networkInterfaces().Ethernet);
+console.log("Network:", os.networkInterfaces());

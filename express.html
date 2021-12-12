@@ -139,7 +139,7 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
       </p>
 
       <p>
-        Installing as a dev dependency.
+        Installing as a dependency.
         Creating environment variables.
         Including in application.
         Using environment variables.
@@ -148,10 +148,29 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
 
     <section id="route-parameters">
       <h2>Route Parameters</h2>
+
+      <p>
+        These are named values passed to the server via a URL. They can be considered mandatory as 
+        they are integral to their route's correct functioning.
+      </p>
+
+      <p>
+        Route parameters are:
+      </p>
+
+      <ul>
+        <li>never null or undefined.</li>
+        <li>strings with a positive length.</li>
+        <li>stored as named properties in the req.params object.</li>
+      </ul>
     </section>
 
     <section id="query-parameters">
       <h2>Query Parameters</h2>
+
+      <p>
+        These are optional named values passed to the server via a URL.
+      </p>
     </section>
 
     <section id="routing">

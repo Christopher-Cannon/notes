@@ -4,7 +4,7 @@ A growing collection of useful references, articles, tools, libraries, tutorials
 
 ## References
 [MDN](https://https://developer.mozilla.org/en-US/.org/) - General web dev reference (HTML/CSS/JS)  
-[TypeScript](https://www.typescriptlang.org/docs/handbook/) - A typed superset of JS that adds optional static typing to help produce more robust code 
+[TypeScript](https://www.typescriptlang.org/docs/handbook/) - A typed superset of JS that adds optional static typing to help produce more robust code  
 [React](https://reactjs.org/) - JS view library  
 [Express](http://expressjs.com/) - Minimal back-end JS framework  
 [Joi](https://joi.dev/api/) - JS library for data validation  

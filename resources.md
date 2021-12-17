@@ -9,6 +9,14 @@ A growing collection of useful references, articles, tools, libraries, tutorials
 [Express](http://expressjs.com/) - Minimal back-end JS framework  
 [Joi](https://joi.dev/api/) - JS library for data validation  
 
+## Practice
+
+### Programming
+[Edabit](https://edabit.com/challenges) - Programming challenges for various languages from very easy to expert difficulty  
+
+### UI
+[UI Design Daily](https://www.uidesigndaily.com/) - UI snippets, useful for HTML/CSS practice  
+
 ## Blogs
 [nico zerpa](https://nicozerpa.com/articles/) - JS articles  
 
